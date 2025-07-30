@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rashmi Phodse | Growth Marketing Specialist</title>
+    <meta name="description" content="Growth Marketing Specialist with 3M+ YouTube views, Rs 50L+ sales attribution, and proven ROI results. YouTube Manager & SEO Analyst.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #004080, #0056b3);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #004080, #0056b3);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .metric {
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+            color: #FFD700;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 0 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #004080;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 80px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #004080;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-highlights {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #004080;
+        }
+        
+        .about-highlights h3 {
+            color: #004080;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight-list {
+            list-style: none;
+        }
+        
+        .highlight-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .highlight-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Case Studies */
+        .case-studies {
+            background: #f8f9fa;
+        }
+        
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .case-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .case-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .case-card h3 {
+            color: #004080;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .case-results {
+            margin-top: 1.5rem;
+        }
+        
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .result-value {
+            font-weight: bold;
+            color: #004080;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .skill-category h3 {
+            color: #004080;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .skill-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #004080, #0056b3);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            color: white;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            padding: 1rem;
+        }
+        
+        .contact-item h4 {
+            margin-bottom: 0.5rem;
+            color: #FFD700;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .metrics {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .section {
+                padding: 60px 1rem;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+        
+        /* Smooth scrolling and animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Rashmi Phodse</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Growth Marketing Specialist</h1>
+            <p class="subtitle">YouTube Manager & SEO Analyst</p>
+            <p>Turning digital content into real sales with proven strategies</p>
+            
+            <div class="metrics">
+                <div class="metric">
+                    <span class="metric-value">3M+</span>
+                    <span class="metric-label">YouTube Views</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">₹50L+</span>
+                    <span class="metric-label">Sales Attribution</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">800+</span>
+                    <span class="metric-label">Qualified Leads</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value">18x</span>
+                    <span class="metric-label">Average ROI</span>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="#case-studies" class="btn btn-primary">View Case Studies</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section fade-in">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a performance-driven marketer with 3+ years of experience crafting scalable acquisition systems using YouTube, SEO, and automation. I specialize in building complete lead-generation systems that consistently deliver measurable growth in traffic, leads, and engagement.</p>
+                
+                <p>My approach combines data-driven strategies with creative content marketing to help brands and creators maximize their reach and ROI. I've successfully reduced cost per lead by 60% while generating substantial revenue attribution for my clients.</p>
+                
+                <p>Currently working as a Digital Marketing Specialist at Swagat Properties, where I've transformed a real estate company from zero online presence to a lead-generation powerhouse.</p>
+            </div>
+            
+            <div class="about-highlights">
+                <h3>Key Achievements</h3>
+                <ul class="highlight-list">
+                    <li>Generated ₹179,000 revenue through YouTube strategy</li>
+                    <li>Grew YouTube channel from 600 to 12,000 subscribers</li>
+                    <li>Achieved #1 Google ranking for "Property Consultant Thane"</li>
+                    <li>Managed 1,365+ customer reviews with 4.9-star rating</li>
+                    <li>Delivered 60% of total company leads through organic marketing</li>
+                    <li>Reduced cost-per-lead to ₹47 (industry average: ₹150)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="case-studies" class="section case-studies fade-in">
+        <h2>Case Studies</h2>
+        <div class="case-grid">
+            <div class="case-card">
+                <h3>🎥 YouTube Channel Growth</h3>
+                <p>Transformed Swagat Properties from zero online presence to a lead-generation powerhouse through strategic YouTube marketing and content optimization.</p>
+                <div class="case-results">
+                    <div class="result-item">
+                        <span>Views Growth:</span>
+                        <span class="result-value">0 → 3M+ (300,000%)</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Subscribers:</span>
+                        <span class="result-value">600 → 12,000</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Revenue Attribution:</span>
+                        <span class="result-value">₹50L+</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Monthly Pipeline:</span>
+                        <span class="result-value">₹5L+ (62.5x ROAS)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-card">
+                <h3>🎯 Local SEO Domination</h3>
+                <p>Achieved #1 Google rankings for competitive local keywords and transformed local search visibility for property consultancy services.</p>
+                <div class="case-results">
+                    <div class="result-item">
+                        <span>Google Ranking:</span>
+                        <span class="result-value">#1 Position</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Monthly Leads:</span>
+                        <span class="result-value">15 → 150+</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Cost Per Lead:</span>
+                        <span class="result-value">₹150 → ₹47</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Maps Views:</span>
+                        <span class="result-value">500,000+</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-card">
+                <h3>📈 Google Ads Optimization</h3>
+                <p>Optimized lead-generation campaigns balancing search and YouTube ads with organic growth, achieving exceptional conversion rates.</p>
+                <div class="case-results">
+                    <div class="result-item">
+                        <span>Conversion Rate:</span>
+                        <span class="result-value">47.85%</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Cost Per Lead:</span>
+                        <span class="result-value">₹10.82</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Qualified Leads:</span>
+                        <span class="result-value">823 (2 months)</span>
+                    </div>
+                    <div class="result-item">
+                        <span>Revenue Impact:</span>
+                        <span class="result-value">₹5.2L</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section fade-in">
+        <h2>Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>🎯 Paid Advertising</h3>
+                <ul class="skill-list">
+                    <li>Google Ads Management</li>
+                    <li>Meta Ads (Facebook/Instagram)</li>
+                    <li>YouTube Ads</li>
+                    <li>Campaign Optimization</li>
+                    <li>Keyword Research</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>📊 SEO & Analytics</h3>
+                <ul class="skill-list">
+                    <li>YouTube SEO</li>
+                    <li>Local SEO</li>
+                    <li>Google My Business</li>
+                    <li>GA4 & Search Console</li>
+                    <li>Performance Tracking</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>🎨 Content Creation</h3>
+                <ul class="skill-list">
+                    <li>Video Editing (CapCut/Adobe)</li>
+                    <li>Graphic Design (Canva Pro)</li>
+                    <li>Bilingual Content</li>
+                    <li>Ad Copy Writing</li>
+                    <li>Thumbnail Design</li>
+                </ul>
+            </div>
+            
+            <div class="skill-category">
+                <h3>⚙️ Marketing Systems</h3>
+                <ul class="skill-list">
+                    <li>Lead Generation</li>
+                    <li>CRM Management</li>
+                    <li>WordPress/Elementor</li>
+                    <li>Marketing Automation</li>
+                    <li>Dashboard Creation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact fade-in">
+        <h2>Let's Work Together</h2>
+        <p>Ready to achieve similar results for your business? Let's discuss your YouTube and SEO goals.</p>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <h4>📧 Email</h4>
+                <a href="mailto:rashmifodse@gmail.com">rashmifodse@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <h4>📱 Phone</h4>
+                <a href="tel:+917208738943">+91 72087 38943</a>
+            </div>
+            <div class="contact-item">
+                <h4>📍 Location</h4>
+                <p>Thane, Maharashtra</p>
+            </div>
+            <div class="contact-item">
+                <h4>💼 LinkedIn</h4>
+                <a href="https://linkedin.com/in/rashmi-phodse" target="_blank">Connect with me</a>
+            </div>
+        </div>
+        
+        <div style="margin-top: 3rem;">
+            <a href="mailto:rashmifodse@gmail.com" class="btn btn-primary">Start a Project</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Rashmi Phodse. All rights reserved.</p>
+        <p>Growth Marketing Specialist | YouTube Manager & SEO Analyst</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle (if needed)
+        const mobileMenuToggle = () => {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        };
+    </script>
+</body>
+</html>
