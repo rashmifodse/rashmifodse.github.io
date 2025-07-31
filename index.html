@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rashmi Phodse | Growth Marketing Specialist</title>
-    <meta name="description" content="Growth Marketing Specialist with 3M+ YouTube views, Rs 50L+ sales attribution, and proven ROI results. YouTube Manager & SEO Analyst.">
+    <title>Rashmi Phodse - Digital Marketer</title>
+    <meta name="description" content="Digital Marketer with 3M+ YouTube views, Rs 50L+ sales attribution. Expert in YouTube SEO, Google Ads, and lead generation.">
     
     <style>
         * {
@@ -17,146 +17,139 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            scroll-behavior: smooth;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
         
-        /* Header & Navigation */
-        header {
-            background: linear-gradient(135deg, #004080, #0056b3);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        nav {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #004080;
         }
         
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 30px;
         }
         
         .nav-links a {
-            color: white;
             text-decoration: none;
-            transition: opacity 0.3s;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
         }
         
         .nav-links a:hover {
-            opacity: 0.8;
+            color: #004080;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #004080, #0056b3);
-            color: white;
-            padding: 120px 0 80px;
+            height: 100vh;
+            display: flex;
+            align-items: center;
             text-align: center;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            color: white;
+            padding-top: 80px;
         }
         
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5em;
+            margin-bottom: 20px;
             font-weight: 700;
         }
         
         .hero .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: 1.5em;
+            margin-bottom: 30px;
             opacity: 0.9;
         }
         
         .metrics {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
         }
         
-        .metric {
-            text-align: center;
+        .metric-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .metric-value {
-            font-size: 2rem;
+            font-size: 2.5em;
             font-weight: bold;
             display: block;
-            color: #FFD700;
+            margin-bottom: 10px;
         }
         
         .metric-label {
-            font-size: 0.9rem;
+            font-size: 1.1em;
             opacity: 0.9;
         }
         
-        .cta-buttons {
-            margin-top: 2rem;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            margin: 0 10px;
-            border-radius: 5px;
-            text-decoration: none;
+        .cta-button {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1em;
             font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
             transition: transform 0.3s, box-shadow 0.3s;
         }
         
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .btn-primary {
-            background: white;
-            color: #004080;
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
         }
         
         /* Sections */
         .section {
             padding: 80px 0;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-left: 2rem;
-            padding-right: 2rem;
+            background: white;
+        }
+        
+        .section:nth-child(even) {
+            background: #f8f9fa;
         }
         
         .section h2 {
-            font-size: 2.5rem;
+            font-size: 2.5em;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 50px;
             color: #004080;
         }
         
@@ -164,123 +157,86 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 50px;
             align-items: center;
         }
         
         .about-text {
-            font-size: 1.1rem;
+            font-size: 1.2em;
             line-height: 1.8;
         }
         
-        .about-highlights {
-            background: #f8f9fa;
-            padding: 2rem;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .skill-card {
+            background: white;
+            padding: 25px;
             border-radius: 10px;
-            border-left: 4px solid #004080;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
         
-        .about-highlights h3 {
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-card h3 {
             color: #004080;
-            margin-bottom: 1rem;
-        }
-        
-        .highlight-list {
-            list-style: none;
-        }
-        
-        .highlight-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .highlight-list li:last-child {
-            border-bottom: none;
+            margin-bottom: 15px;
         }
         
         /* Case Studies */
         .case-studies {
-            background: #f8f9fa;
-        }
-        
-        .case-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            gap: 30px;
         }
         
-        .case-card {
+        .case-study {
             background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
         
-        .case-card:hover {
-            transform: translateY(-5px);
+        .case-study:hover {
+            transform: translateY(-10px);
         }
         
-        .case-card h3 {
+        .case-study h3 {
             color: #004080;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.5em;
+            margin-bottom: 15px;
         }
         
         .case-results {
-            margin-top: 1.5rem;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
         }
         
         .result-item {
             display: flex;
             justify-content: space-between;
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
+            font-weight: 500;
         }
         
         .result-value {
+            color: #28a745;
             font-weight: bold;
-            color: #004080;
-        }
-        
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .skill-category {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        
-        .skill-category h3 {
-            color: #004080;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-        
-        .skill-list {
-            list-style: none;
-            text-align: left;
-        }
-        
-        .skill-list li {
-            padding: 5px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .skill-list li:last-child {
-            border-bottom: none;
         }
         
         /* Contact Section */
         .contact {
-            background: linear-gradient(135deg, #004080, #0056b3);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
         }
@@ -290,36 +246,70 @@
         }
         
         .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            font-size: 1.2em;
+            margin: 30px 0;
         }
         
-        .contact-item {
-            padding: 1rem;
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
         }
         
-        .contact-item h4 {
-            margin-bottom: 0.5rem;
-            color: #FFD700;
-        }
-        
-        .contact-item a {
+        .contact-links a {
             color: white;
             text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: all 0.3s;
         }
         
-        .contact-item a:hover {
-            opacity: 0.8;
-        }
-        
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
+        .proof-image {
+            margin: 20px 0;
             text-align: center;
-            padding: 2rem 0;
+        }
+        
+        .proof-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+        }
+        
+        .image-caption {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+        
+        .proof-section {
+            background: #f8f9fa;
+            padding: 30px 0;
+        }
+        
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .proof-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .proof-card h4 {
+            color: #004080;
+            margin-bottom: 15px;
+            font-size: 1.2em;
         }
         
         /* Mobile Responsive */
@@ -329,318 +319,364 @@
             }
             
             .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.1rem;
+                font-size: 2.5em;
             }
             
             .metrics {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
+                grid-template-columns: 1fr 1fr;
             }
             
             .about-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                text-align: center;
             }
             
-            .section {
-                padding: 60px 1rem;
-            }
-            
-            .btn {
-                display: block;
-                margin: 10px 0;
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
             }
         }
         
-        /* Smooth scrolling and animations */
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
         .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s, transform 0.6s;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            animation: fadeInUp 0.8s ease-out;
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav>
+    <header class="header">
+        <nav class="nav container">
             <div class="logo">Rashmi Phodse</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#case-studies">Case Studies</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#cv">CV</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Growth Marketing Specialist</h1>
-            <p class="subtitle">YouTube Manager & SEO Analyst</p>
-            <p>Turning digital content into real sales with proven strategies</p>
+    <section class="hero">
+        <div class="container">
+            <h1 class="fade-in">Growth Marketing Specialist</h1>
+            <p class="subtitle fade-in">Turning Digital Content Into Real Sales</p>
             
             <div class="metrics">
-                <div class="metric">
+                <div class="metric-card fade-in">
                     <span class="metric-value">3M+</span>
                     <span class="metric-label">YouTube Views</span>
                 </div>
-                <div class="metric">
+                <div class="metric-card fade-in">
                     <span class="metric-value">₹50L+</span>
                     <span class="metric-label">Sales Attribution</span>
                 </div>
-                <div class="metric">
+                <div class="metric-card fade-in">
                     <span class="metric-value">800+</span>
                     <span class="metric-label">Qualified Leads</span>
                 </div>
-                <div class="metric">
+                <div class="metric-card fade-in">
                     <span class="metric-value">18x</span>
                     <span class="metric-label">Average ROI</span>
                 </div>
             </div>
             
-            <div class="cta-buttons">
-                <a href="#case-studies" class="btn btn-primary">View Case Studies</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
+            <a href="#contact" class="cta-button">Let's Work Together</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section fade-in">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>I'm a performance-driven marketer with 3+ years of experience crafting scalable acquisition systems using YouTube, SEO, and automation. I specialize in building complete lead-generation systems that consistently deliver measurable growth in traffic, leads, and engagement.</p>
-                
-                <p>My approach combines data-driven strategies with creative content marketing to help brands and creators maximize their reach and ROI. I've successfully reduced cost per lead by 60% while generating substantial revenue attribution for my clients.</p>
-                
-                <p>Currently working as a Digital Marketing Specialist at Swagat Properties, where I've transformed a real estate company from zero online presence to a lead-generation powerhouse.</p>
-            </div>
-            
-            <div class="about-highlights">
-                <h3>Key Achievements</h3>
-                <ul class="highlight-list">
-                    <li>Generated ₹179,000 revenue through YouTube strategy</li>
-                    <li>Grew YouTube channel from 600 to 12,000 subscribers</li>
-                    <li>Achieved #1 Google ranking for "Property Consultant Thane"</li>
-                    <li>Managed 1,365+ customer reviews with 4.9-star rating</li>
-                    <li>Delivered 60% of total company leads through organic marketing</li>
-                    <li>Reduced cost-per-lead to ₹47 (industry average: ₹150)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies -->
-    <section id="case-studies" class="section case-studies fade-in">
-        <h2>Case Studies</h2>
-        <div class="case-grid">
-            <div class="case-card">
-                <h3>🎥 YouTube Channel Growth</h3>
-                <p>Transformed Swagat Properties from zero online presence to a lead-generation powerhouse through strategic YouTube marketing and content optimization.</p>
-                <div class="case-results">
-                    <div class="result-item">
-                        <span>Views Growth:</span>
-                        <span class="result-value">0 → 3M+ (300,000%)</span>
-                    </div>
-                    <div class="result-item">
-                        <span>Subscribers:</span>
-                        <span class="result-value">600 → 12,000</span>
-                    </div>
-                    <div class="result-item">
-                        <span>Revenue Attribution:</span>
-                        <span class="result-value">₹50L+</span>
-                    </div>
-                    <div class="result-item">
-                        <span>Monthly Pipeline:</span>
-                        <span class="result-value">₹5L+ (62.5x ROAS)</span>
-                    </div>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I specialize in building complete lead-generation systems that turn digital content into real sales. With proven expertise in YouTube marketing, SEO, and paid advertising, I've helped real estate businesses generate over ₹50+ lakhs in attributed sales while reducing their cost per lead by 60%.</p>
+                    
+                    <p>My approach combines data-driven strategies with creative content marketing to deliver measurable growth in traffic, leads, and engagement.</p>
                 </div>
-            </div>
-            
-            <div class="case-card">
-                <h3>🎯 Local SEO Domination</h3>
-                <p>Achieved #1 Google rankings for competitive local keywords and transformed local search visibility for property consultancy services.</p>
-                <div class="case-results">
-                    <div class="result-item">
-                        <span>Google Ranking:</span>
-                        <span class="result-value">#1 Position</span>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>YouTube Growth</h3>
+                        <p>Channel optimization, content strategy, audience retention, monetization</p>
                     </div>
-                    <div class="result-item">
-                        <span>Monthly Leads:</span>
-                        <span class="result-value">15 → 150+</span>
+                    <div class="skill-card">
+                        <h3>SEO Excellence</h3>
+                        <p>Local SEO, keyword research, on-page optimization, ranking strategies</p>
                     </div>
-                    <div class="result-item">
-                        <span>Cost Per Lead:</span>
-                        <span class="result-value">₹150 → ₹47</span>
+                    <div class="skill-card">
+                        <h3>Paid Advertising</h3>
+                        <p>Google Ads, Meta Ads, YouTube Ads, campaign optimization</p>
                     </div>
-                    <div class="result-item">
-                        <span>Maps Views:</span>
-                        <span class="result-value">500,000+</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="case-card">
-                <h3>📈 Google Ads Optimization</h3>
-                <p>Optimized lead-generation campaigns balancing search and YouTube ads with organic growth, achieving exceptional conversion rates.</p>
-                <div class="case-results">
-                    <div class="result-item">
-                        <span>Conversion Rate:</span>
-                        <span class="result-value">47.85%</span>
-                    </div>
-                    <div class="result-item">
-                        <span>Cost Per Lead:</span>
-                        <span class="result-value">₹10.82</span>
-                    </div>
-                    <div class="result-item">
-                        <span>Qualified Leads:</span>
-                        <span class="result-value">823 (2 months)</span>
-                    </div>
-                    <div class="result-item">
-                        <span>Revenue Impact:</span>
-                        <span class="result-value">₹5.2L</span>
+                    <div class="skill-card">
+                        <h3>Analytics & Automation</h3>
+                        <p>GA4, tracking setup, CRM management, lead nurturing</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section fade-in">
-        <h2>Skills & Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>🎯 Paid Advertising</h3>
-                <ul class="skill-list">
-                    <li>Google Ads Management</li>
-                    <li>Meta Ads (Facebook/Instagram)</li>
-                    <li>YouTube Ads</li>
-                    <li>Campaign Optimization</li>
-                    <li>Keyword Research</li>
-                </ul>
+    <!-- Work Section -->
+    <section id="work" class="section">
+        <div class="container">
+            <h2>Case Studies</h2>
+            <div class="case-studies">
+                <div class="case-study">
+                    <h3>YouTube Revenue Generation</h3>
+                    <p>Generated ₹1,82,273 in YouTube revenue while building massive audience engagement and subscriber growth.</p>
+                    <div class="proof-image">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="YouTube Revenue Analytics showing ₹1,82,273 earned" style="width: 100%; border-radius: 8px; margin: 15px 0;">
+                        <div class="image-caption">YouTube Studio Analytics - Revenue Dashboard</div>
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span>Revenue Generated:</span>
+                            <span class="result-value">₹1,82,273</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Views Growth:</span>
+                            <span class="result-value">290K+ (36% above usual)</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Watch Time:</span>
+                            <span class="result-value">12.8K hours</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Subscriber Growth:</span>
+                            <span class="result-value">+1,200 new subscribers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <h3>Google Ads Performance</h3>
+                    <p>Achieved exceptional Google Ads results with high conversion rates and optimal ROAS for local property business.</p>
+                    <div class="proof-image">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Google Ads dashboard showing 823 conversions with 47.85% conversion rate" style="width: 100%; border-radius: 8px; margin: 15px 0;">
+                        <div class="image-caption">Google Ads Campaign Performance - May-Jun 2025</div>
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span>Conversions:</span>
+                            <span class="result-value">823 leads</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Conversion Rate:</span>
+                            <span class="result-value">47.85%</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Click-Through Rate:</span>
+                            <span class="result-value">7.34%</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Actual ROAS:</span>
+                            <span class="result-value">9.25%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <h3>Local SEO Domination</h3>
+                    <p>Achieved #1 Google rankings and massive Google Maps visibility, driving significant business growth.</p>
+                    <div class="proof-image">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Google Maps showing 500,000 total views for Swagat Properties location" style="width: 100%; border-radius: 8px; margin: 15px 0;">
+                        <div class="image-caption">Google Maps - 500,000 Total Views Achievement</div>
+                    </div>
+                    <div class="case-results">
+                        <div class="result-item">
+                            <span>Google Maps Views:</span>
+                            <span class="result-value">500,000+</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Ranking Achievement:</span>
+                            <span class="result-value">#1 for "Property consultant Thane"</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Business Profile Interactions:</span>
+                            <span class="result-value">2,885 (+78.6%)</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Phone Calls:</span>
+                            <span class="result-value">1,848 (+74.2% increase)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="section">
+        <div class="container">
+            <h2>Resume & CV</h2>
+            <div style="text-align: center; margin-bottom: 40px;">
+                <p style="font-size: 1.2em; margin-bottom: 30px;">Download my complete resume or view it online</p>
+                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                    <a href="resume/Rashmi_Phodse_Resume.pdf" target="_blank" class="cta-button" style="background: #28a745;">
+                        📄 Download PDF Resume
+                    </a>
+                    <a href="https://bit.ly/rashmifodse" target="_blank" class="cta-button" style="background: #17a2b8;">
+                        🔗 View Online CV
+                    </a>
+                </div>
             </div>
             
-            <div class="skill-category">
-                <h3>📊 SEO & Analytics</h3>
-                <ul class="skill-list">
-                    <li>YouTube SEO</li>
-                    <li>Local SEO</li>
-                    <li>Google My Business</li>
-                    <li>GA4 & Search Console</li>
-                    <li>Performance Tracking</li>
-                </ul>
+            <div class="cv-preview" style="background: #f8f9fa; padding: 30px; border-radius: 15px; text-align: center;">
+                <h3 style="color: #004080; margin-bottom: 20px;">Professional Summary</h3>
+                <div style="max-width: 600px; margin: 0 auto; font-size: 1.1em; line-height: 1.8;">
+                    <p>Performance-driven marketer with 3+ years of experience crafting scalable acquisition systems using YouTube, SEO, and automation — consistently delivering measurable growth in traffic, leads, and engagement.</p>
+                    
+                    <div style="margin: 30px 0;">
+                        <h4 style="color: #004080; margin-bottom: 15px;">Key Achievements</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                <div style="font-size: 1.5em; font-weight: bold; color: #28a745;">3M+</div>
+                                <div>YouTube Views</div>
+                            </div>
+                            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                <div style="font-size: 1.5em; font-weight: bold; color: #28a745;">₹50L+</div>
+                                <div>Sales Attribution</div>
+                            </div>
+                            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                <div style="font-size: 1.5em; font-weight: bold; color: #28a745;">800+</div>
+                                <div>Qualified Leads</div>
+                            </div>
+                            <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                <div style="font-size: 1.5em; font-weight: bold; color: #28a745;">18x</div>
+                                <div>Average ROI</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px; padding: 20px; background: white; border-radius: 10px;">
+                        <h4 style="color: #004080; margin-bottom: 15px;">Core Expertise</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                            <span style="background: #004080; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">YouTube Growth</span>
+                            <span style="background: #004080; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">SEO Optimization</span>
+                            <span style="background: #004080; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">Google Ads</span>
+                            <span style="background: #004080; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">Lead Generation</span>
+                            <span style="background: #004080; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">Analytics & Tracking</span>
+                            <span style="background: #004080; color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9em;">Content Strategy</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="skill-category">
-                <h3>🎨 Content Creation</h3>
-                <ul class="skill-list">
-                    <li>Video Editing (CapCut/Adobe)</li>
-                    <li>Graphic Design (Canva Pro)</li>
-                    <li>Bilingual Content</li>
-                    <li>Ad Copy Writing</li>
-                    <li>Thumbnail Design</li>
-                </ul>
-            </div>
-            
-            <div class="skill-category">
-                <h3>⚙️ Marketing Systems</h3>
-                <ul class="skill-list">
-                    <li>Lead Generation</li>
-                    <li>CRM Management</li>
-                    <li>WordPress/Elementor</li>
-                    <li>Marketing Automation</li>
-                    <li>Dashboard Creation</li>
-                </ul>
+        </div>
+    </section>
+
+    <!-- Proof Section -->
+    <section class="proof-section">
+        <div class="container">
+            <h2>Visual Proof of Results</h2>
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <h4>YouTube Revenue Success</h4>
+                    <div class="proof-image">
+                        <img src="images/youtube-revenue.png" alt="YouTube Studio showing ₹1,82,273 revenue generated" style="width: 100%;">
+                        <div class="image-caption">YouTube Analytics - Revenue Dashboard</div>
+                    </div>
+                </div>
+                
+                <div class="proof-card">
+                    <h4>Google Ads Performance</h4>
+                    <div class="proof-image">
+                        <img src="images/google-ads-results.png" alt="Google Ads showing 823 conversions with 47.85% rate" style="width: 100%;">
+                        <div class="image-caption">Google Ads Campaign Results</div>
+                    </div>
+                </div>
+                
+                <div class="proof-card">
+                    <h4>Local SEO Rankings</h4>
+                    <div class="proof-image">
+                        <img src="images/google-ranking.png" alt="Google search showing #1 ranking for property consultant Thane" style="width: 100%;">
+                        <div class="image-caption">Google Search Rankings Achievement</div>
+                    </div>
+                </div>
+                
+                <div class="proof-card">
+                    <h4>Google Maps Authority</h4>
+                    <div class="proof-image">
+                        <img src="images/maps-views.png" alt="Google Maps showing 500,000 total views" style="width: 100%;">
+                        <div class="image-caption">500K+ Google Maps Views</div>
+                    </div>
+                </div>
+                
+                <div class="proof-card">
+                    <h4>Business Growth Metrics</h4>
+                    <div class="proof-image">
+                        <img src="images/business-calls.png" alt="Google My Business showing 1,848 calls increase" style="width: 100%;">
+                        <div class="image-caption">74.2% Increase in Business Calls</div>
+                    </div>
+                </div>
+                
+                <div class="proof-card">
+                    <h4>YouTube Channel Performance</h4>
+                    <div class="proof-image">
+                        <img src="images/youtube-analytics.png" alt="YouTube showing 290K views, 36% above usual" style="width: 100%;">
+                        <div class="image-caption">Consistent Above-Average Performance</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section contact fade-in">
-        <h2>Let's Work Together</h2>
-        <p>Ready to achieve similar results for your business? Let's discuss your YouTube and SEO goals.</p>
-        
-        <div class="contact-info">
-            <div class="contact-item">
-                <h4>📧 Email</h4>
-                <a href="mailto:rashmifodse@gmail.com">rashmifodse@gmail.com</a>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Let's Work Together</h2>
+            <p>Ready to achieve similar results for your business?</p>
+            <div class="contact-info">
+                <p>📧 rashmifodse@gmail.com</p>
+                <p>📞 +91 72087 38943</p>
+                <p>📍 Thane, Maharashtra</p>
             </div>
-            <div class="contact-item">
-                <h4>📱 Phone</h4>
-                <a href="tel:+917208738943">+91 72087 38943</a>
+            <div class="contact-links">
+                <a href="mailto:rashmifodse@gmail.com">Send Email</a>
+                <a href="tel:+917208738943">Call Now</a>
             </div>
-            <div class="contact-item">
-                <h4>📍 Location</h4>
-                <p>Thane, Maharashtra</p>
-            </div>
-            <div class="contact-item">
-                <h4>💼 LinkedIn</h4>
-                <a href="https://linkedin.com/in/rashmi-phodse" target="_blank">Connect with me</a>
-            </div>
-        </div>
-        
-        <div style="margin-top: 3rem;">
-            <a href="mailto:rashmifodse@gmail.com" class="btn btn-primary">Start a Project</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Rashmi Phodse. All rights reserved.</p>
-        <p>Growth Marketing Specialist | YouTube Manager & SEO Analyst</p>
-    </footer>
-
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+        // Simple scroll animations
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.case-study');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
                 }
             });
         });
 
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
+        // Initialize elements
+        document.querySelectorAll('.case-study').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'all 0.6s ease-out';
         });
-
-        // Mobile menu toggle (if needed)
-        const mobileMenuToggle = () => {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        };
     </script>
 </body>
 </html>
