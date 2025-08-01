@@ -122,16 +122,26 @@
             margin: 20px 0;
         }
         
-        .screenshot {
+        .screenshot-placeholder {
             border-radius: 10px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
             width: 100%;
-            height: auto;
+            height: 250px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #2a5298;
             transition: transform 0.3s ease;
+            color: #666;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
         }
         
-        .screenshot:hover {
-            transform: scale(1.05);
+        .screenshot-placeholder:hover {
+            transform: scale(1.02);
+            background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
         }
         
         .result-box {
@@ -190,6 +200,88 @@
             color: #555;
         }
         
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .certification-card {
+            background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .certification-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1e3c72, #2a5298, #28a745);
+        }
+        
+        .certification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .cert-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .cert-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 18px;
+            color: white;
+        }
+        
+        .cert-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #1e3c72;
+            margin: 0;
+        }
+        
+        .cert-issuer {
+            color: #2a5298;
+            font-weight: 600;
+            margin: 5px 0 10px 0;
+        }
+        
+        .cert-description {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        
+        .cert-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+        
         .contact-section {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
@@ -230,6 +322,19 @@
             background: #218838;
         }
         
+        .image-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+        }
+        
+        .image-note strong {
+            color: #856404;
+        }
+        
         @media (max-width: 768px) {
             .case-study-grid {
                 grid-template-columns: 1fr;
@@ -245,6 +350,10 @@
             
             .section {
                 padding: 25px;
+            }
+            
+            .certifications-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -282,6 +391,10 @@
         <div class="section">
             <h2>📊 Proven Results with Evidence</h2>
             
+            <div class="image-note">
+                <strong>📷 Image Upload Instructions:</strong> To display your screenshots, please upload your image files (Screenshot 2025-07-27 125857.png, Screenshot 2025-05-10 174020.png, IMG_5831.jpeg, IMG_5835.jpeg, IMG_5841.jpeg, IMG_5817.jpeg) to your web server and update the src attributes in the img tags below with the correct file paths.
+            </div>
+            
             <!-- Case Study 1: Local SEO Success -->
             <div class="case-study">
                 <h3>🎯 Case Study 1: Local SEO Domination</h3>
@@ -289,11 +402,12 @@
                 
                 <div class="case-study-grid">
                     <div>
-                        <img src="Screenshot 2025-07-27 125857.png' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f8f9fa'/%3E%3Ctext x='200' y='150' text-anchor='middle' fill='%23666' font-size='16'%3EGoogle My Business Growth%3C/text%3E%3C/svg%3E" alt="GMB Performance" class="screenshot">
-                        <p style="text-align: center; margin-top: 10px; color: #666;"><em>Screenshot: Business interactions increased 78.6% (1,618 → 2,885)</em></p>
+                        <img src="Screenshot 2025-07-27 125857.png" alt="Description" class="screenshot">
+                        <p style="text-align: center; margin-top: 10px; color: #666;"><em>Screenshot: Business interactions increased 78.6% (1,618 → 3,193)</em></p>
                     </div>
                     <div>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='Screenshot 2025-05-10 174020.png' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f8f9fa'/%3E%3Ctext x='200' y='150' text-anchor='middle' fill='%23666' font-size='16'%3ECall Volume Growth%3C/text%3E%3C/svg%3E" alt="Call Analytics" class="screenshot">
+                        <img src="Screenshot 2025-05-10 174020.png" alt="Description" class="screenshot">
+                        
                         <p style="text-align: center; margin-top: 10px; color: #666;"><em>Screenshot: Phone calls increased 74.2% (1,063 → 1,848)</em></p>
                     </div>
                 </div>
@@ -315,11 +429,11 @@
                 
                 <div class="case-study-grid">
                     <div>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='IMG_5831.jpeg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f8f9fa'/%3E%3Ctext x='200' y='150' text-anchor='middle' fill='%23666' font-size='16'%3EYouTube Analytics Dashboard%3C/text%3E%3C/svg%3E" alt="YouTube Analytics" class="screenshot">
+                        <img src="IMG_5831.jpeg" alt="Description" class="screenshot">
                         <p style="text-align: center; margin-top: 10px; color: #666;"><em>Screenshot: 3.1M views with 290K+ recent views (36% above average)</em></p>
                     </div>
                     <div>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='IMG_5835.jpeg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f8f9fa'/%3E%3Ctext x='200' y='150' text-anchor='middle' fill='%23666' font-size='16'%3ERevenue Dashboard%3C/text%3E%3C/svg%3E" alt="YouTube Revenue" class="screenshot">
+                        <img src="IMG_5835.jpeg" alt="Revenue Dashboard" class="screenshot">
                         <p style="text-align: center; margin-top: 10px; color: #666;"><em>Screenshot: ₹182,273.66 total estimated revenue</em></p>
                     </div>
                 </div>
@@ -341,11 +455,11 @@
                 
                 <div class="case-study-grid">
                     <div>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='IMG_5841.jpeg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f8f9fa'/%3E%3Ctext x='200' y='120' text-anchor='middle' fill='%23666' font-size='14'%3EGoogle Ads Performance%3C/text%3E%3Ctext x='200' y='140' text-anchor='middle' fill='%23666' font-size='14'%3E823 Conversions%3C/text%3E%3Ctext x='200' y='160' text-anchor='middle' fill='%23666' font-size='14'%3E9.25% ROAS%3C/text%3E%3Ctext x='200' y='180' text-anchor='middle' fill='%23666' font-size='14'%3E7.34% CTR%3C/text%3E%3C/svg%3E" alt="Google Ads Dashboard" class="screenshot">
+                        <img src="IMG_5841.jpeg" alt="Google Ads Performance" class="screenshot">
                         <p style="text-align: center; margin-top: 10px; color: #666;"><em>Screenshot: 823 conversions with 9.25% ROAS and 7.34% CTR</em></p>
                     </div>
                     <div>
-                        <img src="data:image/svg+xml,%3Csvg xmlns='IMG_5817.jpeg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f8f9fa'/%3E%3Ctext x='200' y='150' text-anchor='middle' fill='%23666' font-size='16'%3ESearch Rankings Proof%3C/text%3E%3C/svg%3E" alt="Search Rankings" class="screenshot">
+                        <img src="IMG_5817.jpeg" alt="Search Rankings Proof" class="screenshot">
                         <p style="text-align: center; margin-top: 10px; color: #666;"><em>Screenshot: Top 3 ranking for "estate agents in thane"</em></p>
                     </div>
                 </div>
@@ -415,15 +529,83 @@
                         <li>Landing Page Development</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h4>📜 Certifications</h4>
-                    <ul class="skill-list">
-                        <li>Google Analytics 4 Certified</li>
-                        <li>Google Ads Certified</li>
-                        <li>HubSpot SEO Certified</li>
-                        <li>Digital Marketing - IIM Bangalore</li>
-                        <li>Advanced SEO - Simplilearn</li>
-                    </ul>
+            </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="section">
+            <h2>🎓 Professional Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="cert-badge">Verified</div>
+                    <div class="cert-header">
+                        <div class="cert-icon">📊</div>
+                        <div>
+                            <h4 class="cert-title">Google Analytics 4 Certified</h4>
+                            <div class="cert-issuer">Google</div>
+                        </div>
+                    </div>
+                    <p class="cert-description">Proficiency in GA4 implementation, data analysis, and conversion tracking. Expertise in creating custom reports and analyzing user behavior patterns.</p>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="cert-badge">Verified</div>
+                    <div class="cert-header">
+                        <div class="cert-icon">🎯</div>
+                        <div>
+                            <h4 class="cert-title">Google Ads Certified</h4>
+                            <div class="cert-issuer">Google</div>
+                        </div>
+                    </div>
+                    <p class="cert-description">Certified in Performance Max, Search, Display, and Video advertising. Proven expertise in campaign optimization, keyword research, and performance analysis.</p>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="cert-badge">Verified</div>
+                    <div class="cert-header">
+                        <div class="cert-icon">🔍</div>
+                        <div>
+                            <h4 class="cert-title">SEO Certification</h4>
+                            <div class="cert-issuer">HubSpot</div>
+                        </div>
+                    </div>
+                    <p class="cert-description">Comprehensive SEO knowledge including technical optimization, content strategy, and local search optimization. Focus on sustainable ranking improvements.</p>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="cert-badge">Premium</div>
+                    <div class="cert-header">
+                        <div class="cert-icon">🎓</div>
+                        <div>
+                            <h4 class="cert-title">Digital Marketing Program</h4>
+                            <div class="cert-issuer">IIM Bangalore</div>
+                        </div>
+                    </div>
+                    <p class="cert-description">Advanced digital marketing strategies, consumer behavior analysis, and integrated marketing communications from India's premier management institute.</p>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="cert-badge">Verified</div>
+                    <div class="cert-header">
+                        <div class="cert-icon">⚡</div>
+                        <div>
+                            <h4 class="cert-title">Advanced SEO</h4>
+                            <div class="cert-issuer">Simplilearn</div>
+                        </div>
+                    </div>
+                    <p class="cert-description">Advanced technical SEO, site architecture optimization, and enterprise-level SEO strategies. Includes hands-on experience with SEO tools and analytics.</p>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="cert-badge">Active</div>
+                    <div class="cert-header">
+                        <div class="cert-icon">📈</div>
+                        <div>
+                            <h4 class="cert-title">Growth Marketing</h4>
+                            <div class="cert-issuer">Continuous Learning</div>
+                        </div>
+                    </div>
+                    <p class="cert-description">Stay updated with latest marketing trends, AI tools, and growth hacking techniques through continuous professional development and industry training.</p>
                 </div>
             </div>
         </div>
